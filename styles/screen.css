@@ -1,0 +1,400 @@
+/*--Layout--*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container--full {
+  width: 100%;
+}
+
+.row, .flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column.column-12 {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.column.column-6 {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .column.column-6 {
+    width: 100%;
+  }
+}
+
+.h-align__center {
+  justify-content: center;
+}
+
+.h-align__left {
+  margin-right: auto;
+}
+
+.h-align__right {
+  margin-left: auto;
+}
+
+.v-align__center {
+  align-items: center;
+}
+
+.d-none {
+  display: none;
+}
+
+/*--Padding and Margin Classes--*/
+.py-24 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.py-48 {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+/*--Images--*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 0;
+}
+
+/*--Text--*/
+body {
+  color: #2e2e2e;
+}
+
+body, p, a, button, input, optgroup, select, textarea {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  line-height: 1.7;
+}
+
+p a {
+  text-decoration: underline;
+}
+
+a {
+  color: #2e2e2e;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: "Merriweather", serif;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h1, h2, h3 {
+  font-weight: 900;
+}
+
+h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1:first-of-type, h2:first-of-type, h3:first-of-type, h4:first-of-type {
+  margin-top: 0;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-secondary {
+  color: #6c6c6c;
+}
+
+.text-accent {
+  color: #684d68;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.weight-900 {
+  font-weight: 900;
+}
+
+:focus {
+  outline: none;
+}
+
+/*--Buttons--*/
+.button, button {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.button--primary {
+  background-color: #684d68;
+  color: #fff;
+}
+
+.button--secondary {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  color: #684d68;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.button:hover, button:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.button--secondary:hover {
+  box-shadow: none;
+}
+
+/*--Nav--*/
+nav {
+  padding: 8px 24px;
+  max-width: 1600px;
+}
+
+nav li {
+  list-style: none;
+  padding: 0 12px;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+}
+
+nav .material-icons {
+  font-size: 2em;
+}
+
+.logo {
+  max-width: 150px;
+}
+
+nav {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+}
+
+nav .material-icons {
+  cursor: pointer;
+}
+
+@media (min-width: 769px) {
+  nav .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  nav .hamburger {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  nav .desktop-nav {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  nav .desktop-nav {
+    display: none;
+  }
+}
+
+nav .mobile-nav {
+  flex-direction: column;
+  position: fixed;
+  height: 100%;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  width: 0px;
+  padding: 24px 0 0 0;
+  background-color: #fff;
+  margin-top: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+  overflow-x: hidden;
+}
+
+nav .mobile-nav li {
+  padding: 16px;
+}
+
+nav .mobile-nav a {
+  font-size: 1.4em;
+}
+
+nav .mobile-nav .close {
+  position: relative;
+  top: 0px;
+  left: 224px;
+}
+
+/*--Main--*/
+.alt {
+  background-color: #efefef;
+}
+
+.text--box {
+  z-index: 1;
+  width: 75%;
+  padding: 48px 24px;
+}
+
+@media (max-width: 768px) {
+  .text--box {
+    width: 100%;
+  }
+}
+
+.text--box .button {
+  display: inline-block;
+  margin-top: 0.67em;
+}
+
+.text--box h2 {
+  margin-bottom: 0.5em;
+}
+
+.line {
+  width: 70px;
+  height: 1px;
+  margin: 0;
+  background-color: #2e2e2e;
+}
+
+.height-full {
+  height: 100%;
+}
+
+.height-half {
+  height: 50%;
+  position: relative;
+}
+
+.hero {
+  min-height: 90vh;
+}
+
+.hero .height-half:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hero .height-half:hover:after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hero .height-half__first {
+  background-image: url("../assets/bg1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .height-half__last {
+  background-image: url("../assets/bg2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .line {
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+/*--for rows that have images to the right, make text display on top on mobile--*/
+@media (max-width: 768px) {
+  .reverse .column:last-of-type {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .reverse .column:first-of-type {
+    order: 2;
+  }
+}
+
+/*--contact form--*/
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  max-width: 500px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #bbb;
+  margin: 1em 0 0 0;
+  min-height: 30px;
+}
+
+.contact-form button {
+  margin: 1em 0 0 0;
+}
+
+/*--Footer--*/
+footer {
+  background-color: #e0d4e0;
+  color: #684d68;
+}
+
+footer h4 {
+  margin-bottom: 1em;
+}
+
+footer a {
+  color: #684d68;
+}
